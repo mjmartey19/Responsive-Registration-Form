@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    --yellow: #ffc61f; 
+    --blue: rgb(14, 47, 233);
+    --black: #000;
+    --red: #e20606;
+    --white: #fff;
+}
+body{
+    background: var(--yellow); 
+    font-family: poppins;
+
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+div.form-container{
+    background-color: var(--white);
+    width: 800px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.form-container h2{
+    margin-bottom: 10px;
+}
+
+.form-container form .row{
+    display: flex;
+}
+form .row{
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+form .row .field{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+form .row .field input{
+    line-height: 40px;
+    padding-left: 10px;
+    color: var(--black);
+    font-size: 14px;
+    border: 1px solid rgb(161, 160, 160);
+    border-radius: 5px;
+    width: 100%;
+}
+
+form .row .field input.active{
+    border-color: var(--red);
+ }
+
+form .radio .radio-button input{
+    margin-right: 5px;
+}
+
+form .btn input{
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border: none;
+    margin-bottom: 30px;
+    background-color: var(--yellow);
+    color: var(--white);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+}
+
+
+form .btn input:hover{
+    background: var(--black);
+}
+form input:focus.active{
+    outline: 1px solid var(--red);
+    border-color: var(--red);
+}
+
+@media screen and (max-width:914px){
+    .form-container form .row{
+       display: block;
+    }
+    form .row .field{
+        width: 100%;
+        margin-top: 20px;
+    }
+    div.form-container{
+       
+        width: 500px;
+        margin: 100px 20px;
+       
+    }
+}
